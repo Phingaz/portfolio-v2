@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header-height {
+    @apply h-[var(--header-height)];
+  }
+
+  .section-head {
+    @apply text-section-head;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-[1300px];
+  }
+
+  .screen-height {
+    @apply min-h-[calc(100svh-var(--header-height))];
+  }
+}
+
+.outlined {
+  -webkit-text-fill-color: white;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: -2px -2px 0 #010127, 0 -2px 0 #010127, 2px -2px 0 #010127,
+    2px 0 0 #010127, 2px 2px 0 #010127, 0 2px 0 #010127, -2px 2px 0 #010127,
+    -2px 0 0 #010127;
+}
+
+:root {
+  --header-height: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: var(--header-height);
+}
+
+body {
+  font-family: var(--font-sora), sans-serif;
+}
+
+::selection {
+  background: #010127;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: #cacaca;
+}
+::-webkit-scrollbar-track {
+  background: light-dark(#fafafa, #374151);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cacaca;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff00 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
