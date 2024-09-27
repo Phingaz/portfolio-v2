@@ -11,9 +11,9 @@ const SectionHead = ({
   className?: string;
 }) => {
   return (
-    <h3 className={cn("section-head py-5", className)}>
+    <h2 className={cn("section-head py-5", className)}>
       {first} <span className="font-semibold">{second}</span>
-    </h3>
+    </h2>
   );
 };
 

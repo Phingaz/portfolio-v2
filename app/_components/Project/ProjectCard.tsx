@@ -41,6 +41,7 @@ function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
       <Image
         fill
         sizes="100%"
+        priority={false}
         src={project.image}
         alt={project.title}
         className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 object-cover object-center"
@@ -74,6 +75,7 @@ function InfoCardWithTilt({ project }: { project: TProject }) {
         <Image
           width={200}
           height={100}
+          priority={false}
           src={project.image}
           alt={project.title}
           className="grayscale group-hover:grayscale-0 transition-all duration-500 w-full h-full rounded-xl overflow-hidden absolute top-0 left-0 -z-10 object-cover object-center"

@@ -26,13 +26,21 @@ const Hero = () => {
           </p>
 
           <div className="mt-10 flex items-center gap-4">
-            <Link href="https://github.com/Phingaz" target="_blank">
-              <Button variant="inverted" className="p-2">
+            <Link
+              target="_blank"
+              aria-label="github"
+              href="https://github.com/Phingaz"
+            >
+              <Button aria-label="github" variant="inverted" className="p-2">
                 <Github size={20} />
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/piinoya" target="_blank">
-              <Button variant="inverted" className="p-2">
+            <Link
+              target="_blank"
+              aria-label="github"
+              href="https://www.linkedin.com/in/piinoya"
+            >
+              <Button aria-label="linkedin" variant="inverted" className="p-2">
                 <Linkedin size={20} />
               </Button>
             </Link>
