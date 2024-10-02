@@ -58,7 +58,11 @@ export default function Header() {
             <span className="md:block hidden">
               <ThemeToggle />
             </span>
-            <a href="/cv.pdf" download="Prosper Agwegiokhe Cv">
+            <a
+              href="/cv.pdf"
+              download="Prosper Agwegiokhe Cv"
+              aria-label="link to download cv"
+            >
               <Button variant="icon" className="hidden md:inline-flex">
                 Resume
                 <DocumentDownload
@@ -107,7 +111,11 @@ export default function Header() {
               ))}
             </div>
             <div className="flex items-center gap-5">
-              <a href="/cv.pdf" download="Prosper Agwegiokhe Cv">
+              <a
+                href="/cv.pdf"
+                download="Prosper Agwegiokhe Cv"
+                aria-label="link to download cv"
+              >
                 <button className="flex md:hidden ml-6 gap-2 items-center font-[500] border border-black bg-black text-white hover:bg-white hover:border-gray-700 hover:text-black transition-all px-4 py-2 rounded-md group dark:border-white">
                   Resume
                   <DocumentDownload
