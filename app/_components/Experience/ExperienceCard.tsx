@@ -34,9 +34,9 @@ const ExperienceCard = ({ job, isOdd }: { isOdd: boolean; job: TJob }) => {
       >
         <motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
           <div className="p-6 rounded-lg border border-gray-600 shadow-lg transition-all duration-300">
-            <h4 className="text-xl font-semibold text-gray-100 mb-4">
+            <h3 className="text-xl font-semibold text-gray-100 mb-4">
               {job.title}
-            </h4>
+            </h3>
             <p className="text-sm font-[300] text-gray-200">{job.text}</p>
           </div>
         </motion.div>

@@ -27,12 +27,13 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative block text-left h-full min-w-fit min-h-fit">
       <div>
         <Button
           variant="icon"
           type="button"
           id="menu-button"
+          aria-label="Theme Toggle"
           aria-expanded={isOpen}
           aria-haspopup="true"
           onClick={toggleDropdown}

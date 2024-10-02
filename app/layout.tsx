@@ -31,6 +31,10 @@ export default function RootLayout({
           content="web developer, portfolio, Next.js, frontend, backend, React, JavaScript developer, TypeScript, web design, web development, technology, software engineer, Prosper Agwegiokhe"
         />
         <meta
+          name="description"
+          content="A modern web development portfolio showcasing innovative projects done by Prosper Agwegiokhe."
+        />
+        <meta
           property="og:title"
           content="Prosper Agwegiokhe's Portfolio | Web Developer Portfolio"
         />
