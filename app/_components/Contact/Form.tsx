@@ -76,7 +76,7 @@ const Form = () => {
         autoComplete="name"
         placeholder="Your name"
         onChange={(e) => setName(e.target.value)}
-        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent px-3 h-[45px] transition-all duration-300 ${
+        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent px-3 h-[45px] transition-all duration-300 dark:border-white ${
           error?.includes("Name") ? "border-red-600" : ""
         }`}
       />
@@ -86,7 +86,7 @@ const Form = () => {
         autoComplete="email"
         placeholder="Your email"
         onChange={(e) => setEmail(e.target.value)}
-        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent px-3 h-[45px] transition-all duration-300 ${
+        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent px-3 h-[45px] transition-all duration-300 dark:border-white ${
           error?.includes("email") ? "border-red-600" : ""
         }`}
       />
@@ -94,7 +94,7 @@ const Form = () => {
         value={message}
         placeholder="How can I help you?"
         onChange={(e) => setMessage(e.target.value)}
-        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent p-3 min-h-[200px] transition-all duration-300 ${
+        className={`border-2 font-semibold placeholder:font-[500] border-black rounded-custom bg-transparent p-3 min-h-[200px] transition-all duration-300 dark:border-white ${
           error?.includes("Message") ? "border-red-600" : ""
         }`}
       />

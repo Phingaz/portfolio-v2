@@ -21,15 +21,22 @@
 }
 
 .outlined {
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: light-dark(var(--light), var(--dark));
   -webkit-font-smoothing: antialiased;
-  text-shadow: -2px -2px 0 #010127, 0 -2px 0 #010127, 2px -2px 0 #010127,
-    2px 0 0 #010127, 2px 2px 0 #010127, 0 2px 0 #010127, -2px 2px 0 #010127,
-    -2px 0 0 #010127;
+  text-shadow: -2px -2px 0 light-dark(var(--dark), var(--light)),
+    0 -2px 0 light-dark(var(--dark), var(--light)),
+    2px -2px 0 light-dark(var(--dark), var(--light)),
+    2px 0 0 light-dark(var(--dark), var(--light)),
+    2px 2px 0 light-dark(var(--dark), var(--light)),
+    0 2px 0 light-dark(var(--dark), var(--light)),
+    -2px 2px 0 light-dark(var(--dark), var(--light)), -2px 0 0 var(--dark);
 }
 
 :root {
   --header-height: 80px;
+  --accent: #02024f;
+  --light: #fcfcfc;
+  --dark: #010127;
 }
 
 html {
@@ -42,7 +49,7 @@ body {
 }
 
 ::selection {
-  background: #010127;
+  background: var(--dark);
   color: white;
 }
 
@@ -56,7 +63,7 @@ body {
   background: #cacaca;
 }
 ::-webkit-scrollbar-track {
-  background: light-dark(#fafafa, #374151);
+  background: light-dark(var(--light), #374151);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {

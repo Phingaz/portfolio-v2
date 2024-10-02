@@ -63,9 +63,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <ThemeProvider enableSystem attribute="class" defaultTheme="system">
-        <body className={`${sora.variable} antialiased`}>{children}</body>
-      </ThemeProvider>
+      <body className={`${sora.variable} antialiased`}>
+        <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

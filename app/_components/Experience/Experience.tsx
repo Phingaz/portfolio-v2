@@ -25,7 +25,7 @@ const Experience = () => {
       </div>
       <div
         aria-label="Background shape"
-        className="hidden md:block absolute bottom-0 left-0 w-full h-32 bg-gray-50"
+        className="hidden md:block absolute bottom-0 left-0 w-full h-32 bg-gray-50 dark:bg-black"
         style={{
           clipPath: "ellipse(50% 20% at 50% 100%)",
         }}

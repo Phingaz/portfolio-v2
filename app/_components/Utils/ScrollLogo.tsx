@@ -18,7 +18,8 @@ const ScrollLogo = () => {
           return (
             <li
               key={i}
-              className="min-w-[100px] h-[100px] flex justify-center flex-col items-center gap-2 border-2 border-black rounded-custom "
+              className="min-w-[100px] h-[100px] flex justify-center flex-col items-center gap-2 border-2 border-black rounded-custom dark:
+              0border-white"
             >
               <span>
                 <Image

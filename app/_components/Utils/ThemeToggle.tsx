@@ -30,12 +30,13 @@ export default function ThemeToggle() {
     <div className="relative inline-block text-left">
       <div>
         <Button
+          variant="icon"
           type="button"
           id="menu-button"
           aria-expanded={isOpen}
           aria-haspopup="true"
           onClick={toggleDropdown}
-          className="bg-white text-main"
+          className="bg-white text-black dark:bg-black dark:hover:bg-gray-800 dark:text-white"
         >
           {theme === "light" ? (
             <Sun size={20} />
@@ -50,13 +51,13 @@ export default function ThemeToggle() {
       {isOpen && (
         <div
           role="menu"
-          className="absolute -right-[70px] z-10 mt-2 w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none animate-fade-in"
+          className="absolute -right-[70px] z-10 mt-2 w-[200px] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none animate-fade-in dark:bg-black dark:ring-white dark:ring-opacity-10 duration-300"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
           <div className="py-1" role="none">
             <button
-              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100"
+              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
               role="menuitem"
               onClick={light}
             >
@@ -64,7 +65,7 @@ export default function ThemeToggle() {
               Light Mode
             </button>
             <button
-              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100"
+              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
               role="menuitem"
               onClick={dark}
             >
@@ -72,7 +73,7 @@ export default function ThemeToggle() {
               Dark Mode
             </button>
             <button
-              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100"
+              className="block w-full px-4 py-2 text-left text-xs text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
               role="menuitem"
               onClick={system}
             >

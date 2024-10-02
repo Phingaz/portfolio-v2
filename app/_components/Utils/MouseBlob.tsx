@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const generateRandomBorderRadius = () => {
   return {
@@ -13,6 +14,7 @@ const generateRandomBorderRadius = () => {
 };
 
 const MouseBlob = () => {
+  const { theme, resolvedTheme } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [borderRadius, setBorderRadius] = useState(
     generateRandomBorderRadius()
@@ -35,45 +37,49 @@ const MouseBlob = () => {
   }, []);
 
   return (
-    <motion.div className="hidden md:block fixed top-0 left-0 w-full h-full pointer-events-none z-[51] animate-pulse">
-      <motion.div
-        className="absolute size-[200px] bg-accent/20 rounded-full mix-blend-multiply filter blur-xl"
-        animate={{
-          x: mousePosition.x - 50,
-          y: mousePosition.y - 50,
-          scale: [1, 1.2, 1],
-          borderTopLeftRadius: borderRadius.topLeft,
-          borderTopRightRadius: borderRadius.topRight,
-          borderBottomLeftRadius: borderRadius.bottomLeft,
-          borderBottomRightRadius: borderRadius.bottomRight,
-        }}
-        transition={{
-          x: { type: "spring", stiffness: 300, damping: 20 },
-          y: { type: "spring", stiffness: 300, damping: 20 },
-          scale: { duration: 2, repeat: Infinity, repeatType: "reverse" },
-          borderTopLeftRadius: {
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          },
-          borderTopRightRadius: {
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          },
-          borderBottomLeftRadius: {
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          },
-          borderBottomRightRadius: {
-            duration: 5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          },
-        }}
-      />
-    </motion.div>
+    <>
+      {theme === "light" || resolvedTheme === "light" ? (
+        <motion.div className="hidden md:block fixed top-0 left-0 w-full h-full pointer-events-none z-[51] animate-pulse">
+          <motion.div
+            className="absolute size-[200px] bg-accent/20 rounded-full mix-blend-multiply filter blur-xl"
+            animate={{
+              x: mousePosition.x - 50,
+              y: mousePosition.y - 50,
+              scale: [1, 1.2, 1],
+              borderTopLeftRadius: borderRadius.topLeft,
+              borderTopRightRadius: borderRadius.topRight,
+              borderBottomLeftRadius: borderRadius.bottomLeft,
+              borderBottomRightRadius: borderRadius.bottomRight,
+            }}
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 20 },
+              y: { type: "spring", stiffness: 300, damping: 20 },
+              scale: { duration: 2, repeat: Infinity, repeatType: "reverse" },
+              borderTopLeftRadius: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              borderTopRightRadius: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              borderBottomLeftRadius: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+              borderBottomRightRadius: {
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              },
+            }}
+          />
+        </motion.div>
+      ) : null}
+    </>
   );
 };
 

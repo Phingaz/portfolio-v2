@@ -11,14 +11,14 @@ const Hero = () => {
     <section id="hero" className="container screen-height py-0">
       <div className="flex flex-col md:flex-row justify-center md:items-center gap-1 py-5">
         <div className="md:w-[50%]">
-          <h1 className="text-hero-text font-[500] leading-[1.4] mb-5 text-heading">
+          <h1 className="text-hero-text font-[500] leading-[1.4] mb-5 text-heading dark:text-white">
             Hello, I am <span className="font-bold">Prosper Agwegiokhe</span>.
             <br />A
             <span className="outlined tracking-wider"> Software Developer</span>
             <br />
             Based In <span className="font-bold">Brasil</span>.
           </h1>
-          <p className="text-gray-500 text-sm md:max-w-[500px] hover:text-gray-700 transition-all">
+          <p className="text-gray-500 text-sm md:max-w-[500px] hover:text-gray-700 transition-all dark:text-gray-200">
             As a Frontend Developer, I specialize in crafting dynamic,
             responsive, and visually stunning web experiences that blend design
             with functionality. From intuitive user interfaces to seamless

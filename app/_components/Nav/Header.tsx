@@ -30,8 +30,8 @@ export default function Header() {
 
   return (
     <header
-      className={`header-height sticky top-0 z-50 transition-shadow duration-300 ${
-        hasScrolled ? "shadow-md bg-gray-50" : ""
+      className={`header-height sticky top-0 z-50 duration-300 dark:text-white transition-all ${
+        hasScrolled ? "shadow-md bg-gray-50 dark:bg-black" : ""
       }`}
     >
       <div className="container h-full">
@@ -46,7 +46,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-500 hover:text-gray-900 font-[500] transition duration-150 ease-in-out"
+                className="text-gray-500 hover:text-gray-900 font-[500] transition-all duration-300 dark:text-white dark:hover:text-gray-300"
               >
                 {item.name}
               </Link>

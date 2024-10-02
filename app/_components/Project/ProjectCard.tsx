@@ -39,7 +39,7 @@ function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
         transition: { duration: 0.3, delay: 0.01 },
       }}
       className={cn(
-        "relative hidden lg:block bg-gray-50 w-[50%] h-full rounded-xl group overflow-clip",
+        "relative hidden lg:block bg-gray-50 w-[50%] h-full rounded-xl z-10 group overflow-clip",
         isOdd && "order-2"
       )}
     >
@@ -57,7 +57,7 @@ function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
 
 function InfoCardWithTilt({ project }: { project: TProject }) {
   return (
-    <TiltCard className="lg:w-[50%] lg:aspect-[16/9] bg-gray-50 shadow-2xl">
+    <TiltCard className="lg:w-[50%] lg:aspect-[16/9] bg-gray-50 shadow-2xl dark:bg-gray-900 z-10">
       <MotionLink
         target="_blank"
         href={project.link}
