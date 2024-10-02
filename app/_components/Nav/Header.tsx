@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CloseSquare, DocumentDownload, HambergerMenu } from "iconsax-react";
 import { Button } from "@/components/ui/button";
 import { navItems } from "../../constants";
+import ThemeToggle from "../Utils/ThemeToggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,15 +53,18 @@ export default function Header() {
             ))}
           </nav>
 
-          <a href="/cv.pdf" download="Prosper Agwegiokhe Cv">
-            <Button variant="icon" className="hidden md:inline-flex  ">
-              Resume
-              <DocumentDownload
-                size={16}
-                className="group-hover:animate-bounce"
-              />
-            </Button>
-          </a>
+          <div className="flex items-center gap-5">
+            <ThemeToggle />
+            <a href="/cv.pdf" download="Prosper Agwegiokhe Cv">
+              <Button variant="icon" className="hidden md:inline-flex  ">
+                Resume
+                <DocumentDownload
+                  size={16}
+                  className="group-hover:animate-bounce"
+                />
+              </Button>
+            </a>
+          </div>
           <div className="md:hidden">
             <Button
               variant="neutral"

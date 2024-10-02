@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "./_hooks/ThemeProvider";
 
 const sora = localFont({
   src: "./fonts/Sora-VariableFont_wght.ttf",
@@ -62,7 +63,9 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${sora.variable} antialiased`}>{children}</body>
+      <ThemeProvider enableSystem attribute="class" defaultTheme="system">
+        <body className={`${sora.variable} antialiased`}>{children}</body>
+      </ThemeProvider>
     </html>
   );
 }
