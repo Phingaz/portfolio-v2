@@ -18,18 +18,17 @@ const ScrollLogo = () => {
           return (
             <li
               key={i}
-              className="min-w-[100px] h-[100px] flex justify-center flex-col items-center gap-2 border-2 border-black rounded-custom dark:
-              0border-white"
+              className="min-w-[100px] h-[100px] flex justify-center flex-col items-center gap-2 border-2 border-black rounded-custom dark:dark:border-white bg-white"
             >
-              <span>
-                <Image
-                  src={`/skills/${el.logo}.svg`}
-                  alt="logo"
-                  width={50}
-                  height={50}
-                />
-              </span>
-              <p className="text-sm font-semibold">{el.title}</p>
+              <Image
+                alt="logo"
+                width={50}
+                height={50}
+                src={`/skills/${el.logo}.svg`}
+              />
+              <p className="text-sm font-semibold dark:text-black">
+                {el.title}
+              </p>
             </li>
           );
         })}

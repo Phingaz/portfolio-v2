@@ -35,7 +35,7 @@
 :root {
   --header-height: 80px;
   --accent: #02024f;
-  --light: #fcfcfc;
+  --light: #f3f4f6;
   --dark: #010127;
 }
 
@@ -49,8 +49,8 @@ body {
 }
 
 ::selection {
-  background: var(--dark);
-  color: white;
+  background: light-dark(var(--dark), var(--light));
+  color: light-dark(var(--light), var(--dark));
 }
 
 ::-webkit-scrollbar {

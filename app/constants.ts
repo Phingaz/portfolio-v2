@@ -73,7 +73,7 @@ export const projects: TProject[] = [
     description:
       "This innovative app harnesses the power of the TMDB (The Movie Database) API to bring film enthusiasts a wealth of movie information at their fingertips. Users can explore a vast catalog of films, accessing details like cast, crew, ratings, and synopses. With its sleek interface and comprehensive movie data, this app is a must-have for anyone looking to enhance their cinematic experience.",
     image: "/projects/movie.png",
-    link: "https://piimovies.pnoya.com",
+    link: "https://piimovie.pnoya.com",
   },
   {
     title: "My Porfolio V1",

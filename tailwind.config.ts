@@ -22,7 +22,7 @@ const config: Config = {
         heading: "#1f2937",
         body: "#4b5563",
         black: "#010127",
-        white: "#fcfcfc",
+        white: "#f3f4f6",
         accent: "#02024f",
       },
       borderRadius: { custom: "4px" },

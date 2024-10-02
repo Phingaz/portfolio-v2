@@ -36,14 +36,14 @@ export default function ThemeToggle() {
           aria-expanded={isOpen}
           aria-haspopup="true"
           onClick={toggleDropdown}
-          className="bg-white text-black dark:bg-black dark:hover:bg-gray-800 dark:text-white"
+          className="bg-white border-none text-black dark:bg-black dark:hover:bg-gray-800 dark:text-white"
         >
           {theme === "light" ? (
-            <Sun size={20} />
+            <Sun />
           ) : theme === "dark" ? (
-            <Moon size={20} />
+            <Moon />
           ) : (
-            <MonitorCog size={20} />
+            <MonitorCog />
           )}
         </Button>
       </div>
