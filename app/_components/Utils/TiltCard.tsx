@@ -8,19 +8,19 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const ROTATION_RANGE = 32.5;
-const HALF_ROTATION_RANGE = 32.5 / 2;
-
 type TiltCardProps = {
   className?: string;
   children: React.ReactNode;
+  ROTATION_RANGE?: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   style?: Record<string, any>;
 };
 
 export const TiltCard = forwardRef<HTMLDivElement, TiltCardProps>(
-  ({ style, children, className }, ref) => {
+  ({ style, children, className, ROTATION_RANGE = 32.5 }, ref) => {
     const innerRef = useRef<HTMLDivElement>(null);
+
+    const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
     useImperativeHandle(ref, () => innerRef.current as HTMLDivElement);
 
@@ -59,11 +59,12 @@ export const TiltCard = forwardRef<HTMLDivElement, TiltCardProps>(
         ref={innerRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        style={{ transformStyle: "preserve-3d", transform, ...style }}
-        className={cn(
-          "relative w-full h-full rounded-xl bg-transparent",
-          className
-        )}
+        style={{
+          transformStyle: "preserve-3d",
+          transform,
+          ...style,
+        }}
+        className={cn("relative w-full h-full rounded-xl", className)}
       >
         <div
           className={cn("w-full h-full")}

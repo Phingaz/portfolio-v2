@@ -26,9 +26,10 @@ const ExperienceCard = ({ job, isOdd }: { isOdd: boolean; job: TJob }) => {
       <TimelineDate date={job.time} isOdd={isOdd} />
       <TiltCard
         ref={cardRef}
+        ROTATION_RANGE={15}
         style={{ opacity }}
         className={`lg:w-5/12 hover:shadow-md rounded-lg overflow-clip ${
-          isOdd ? "lg:pl-8" : "lg:pr-8"
+          isOdd ? "lg:ml-8" : "lg:mr-8"
         }`}
       >
         <motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>

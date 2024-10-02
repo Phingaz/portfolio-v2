@@ -5,6 +5,9 @@ import Image from "next/image";
 import TiltCard from "../Utils/TiltCard";
 import { cn } from "@/lib/utils";
 import { TProject } from "../../types";
+import Link from "next/link";
+
+const MotionLink = motion.create(Link);
 
 const ProjectCard = ({
   isOdd,
@@ -25,7 +28,9 @@ export default ProjectCard;
 
 function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
   return (
-    <motion.div
+    <MotionLink
+      href={project.link}
+      target="_blank"
       initial={{ y: 100, opacity: 0, scale: 0.5 }}
       whileInView={{
         y: 0,
@@ -46,14 +51,16 @@ function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
         alt={project.title}
         className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 object-cover object-center"
       />
-    </motion.div>
+    </MotionLink>
   );
 }
 
 function InfoCardWithTilt({ project }: { project: TProject }) {
   return (
-    <TiltCard className="lg:w-[50%] lg:aspect-[16/9]">
-      <motion.div
+    <TiltCard className="lg:w-[50%] lg:aspect-[16/9] bg-gray-50 shadow-2xl">
+      <MotionLink
+        target="_blank"
+        href={project.link}
         initial={{ y: 100, opacity: 0, scale: 0.01 }}
         whileInView={{
           y: 0,
@@ -61,16 +68,18 @@ function InfoCardWithTilt({ project }: { project: TProject }) {
           scale: 1,
           transition: { duration: 0.3, delay: 0.01 + 0.1 },
         }}
-        className="w-full min-h-full h-full flex justify-center flex-col shadow-lg relative rounded-xl group bg-gray-100"
+        className="w-full min-h-full h-full flex justify-center flex-col shadow-lg relative rounded-xl group"
       >
         <div
           style={{ backdropFilter: "brightness(0.3)" }}
           className="transition-all duration-500 bg-transparent backdrop-blur-lg shadow-lg w-full min-h-full p-8 rounded-xl overflow-clip"
         >
-          <h3 className="text-project-head font-bold mb-4 text-white">
+          <h3 className="text-project-head font-[500] mb-4 text-white">
             {project.title}
           </h3>
-          <p className="text-gray-200">{project.description}</p>
+          <p className="text-gray-200 font-[400] text-sm">
+            {project.description}
+          </p>
         </div>
         <Image
           width={200}
@@ -80,7 +89,7 @@ function InfoCardWithTilt({ project }: { project: TProject }) {
           alt={project.title}
           className="grayscale group-hover:grayscale-0 transition-all duration-500 w-full h-full rounded-xl overflow-hidden absolute top-0 left-0 -z-10 object-cover object-center"
         />
-      </motion.div>
+      </MotionLink>
     </TiltCard>
   );
 }

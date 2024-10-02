@@ -59,14 +59,14 @@ export const projects: TProject[] = [
     description:
       "Branded Africa is a versatile e-commerce platform connecting businesses and consumers across Africa. It supports B2B, B2C, C2B, and C2C transactions, allowing users to easily list products and manage orders. The platform streamlines online buying and selling for both individuals and companies.",
     image: "/projects/branded.png",
-    link: "https://branded-africa.pnoya.com",
+    link: "https://ba.pnoya.com",
   },
   {
     title: "Alex Barbs",
     description:
       "Alex Barbs is a user-friendly online booking platform designed specifically for barber services. This convenient tool allows customers to easily schedule their haircuts and grooming appointments with their favorite barber. The app saves time for both clients and barbers, reducing phone calls and eliminating scheduling conflicts.",
     image: "/projects/alex.png",
-    link: "https://alex-barbs.pnoya.com",
+    link: "https://alexbarbs.pnoya.com",
   },
   {
     title: "Movie Box",
@@ -74,5 +74,12 @@ export const projects: TProject[] = [
       "This innovative app harnesses the power of the TMDB (The Movie Database) API to bring film enthusiasts a wealth of movie information at their fingertips. Users can explore a vast catalog of films, accessing details like cast, crew, ratings, and synopses. With its sleek interface and comprehensive movie data, this app is a must-have for anyone looking to enhance their cinematic experience.",
     image: "/projects/movie.png",
     link: "https://piimovies.pnoya.com",
+  },
+  {
+    title: "My Porfolio V1",
+    description:
+      "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators. The design is clean and user-friendly, allowing visitors to easily navigate through various sections like About Me, Projects, and Contact.",
+    image: "/projects/portfolio.png",
+    link: "https://pii.netlify.app",
   },
 ];
