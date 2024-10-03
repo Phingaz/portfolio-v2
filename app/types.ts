@@ -9,4 +9,5 @@ export type TProject = {
   description: string;
   image: string;
   link: string;
+  linkToGH?: string;
 };

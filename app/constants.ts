@@ -74,6 +74,7 @@ export const projects: TProject[] = [
       "This innovative app harnesses the power of the TMDB (The Movie Database) API to bring film enthusiasts a wealth of movie information at their fingertips. Users can explore a vast catalog of films, accessing details like cast, crew, ratings, and synopses. With its sleek interface and comprehensive movie data, this app is a must-have for anyone looking to enhance their cinematic experience.",
     image: "/projects/movie.png",
     link: "https://piimovie.pnoya.com",
+    linkToGH: "https://github.com/Phingaz/piimovie",
   },
   {
     title: "Kojo Support Project",
@@ -81,6 +82,14 @@ export const projects: TProject[] = [
       "The support dashboard offers a streamlined interface for accessing company data. Users can query the database through a clean, filterable, and sortable table, making it easy to find relevant information. Each entry can display specific customer details and also view agent information, including their performance metrics and assigned tickets. The dashboard prioritizes simplicity, ensuring quick and efficient access to both customer and agent data for seamless support management.",
     image: "/projects/kojo.png",
     link: "https://kojo-dashboard.pnoya.com",
+    linkToGH: "https://github.com/Phingaz/kojo-support-project",
+  },
+  {
+    title: "Loja Frank Mills",
+    description:
+      "At Frank Mills, they offer a wide selection of stylish leather bags and backpacks to suit every occasion. The user-friendly app ensures that all orders go directly to WhatsApp for quick and easy communication. Plus, with the admin dashboard, the admins can easily manage products, track inventory, and update their selections—all from their device. Discover the perfect blend of style and convenience at Frank Mills today!",
+    image: "/projects/fm.png",
+    link: "https://frankmills.pnoya.com",
   },
   {
     title: "My Porfolio V1",
@@ -88,5 +97,6 @@ export const projects: TProject[] = [
       "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators. The design is clean and user-friendly, allowing visitors to easily navigate through various sections like About Me, Projects, and Contact.",
     image: "/projects/portfolio.png",
     link: "https://pii.netlify.app",
+    linkToGH: "https://github.com/Phingaz/myPortfolio",
   },
 ];

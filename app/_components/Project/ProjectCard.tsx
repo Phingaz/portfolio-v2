@@ -2,9 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import TiltCard from "../Utils/TiltCard";
-import { cn } from "@/lib/utils";
 import { TProject } from "../../types";
 import Link from "next/link";
+import ImageCard from "./ImageCard";
 
 const ProjectCard = ({
   isOdd,
@@ -23,31 +23,9 @@ const ProjectCard = ({
 
 export default ProjectCard;
 
-function ImageCard({ isOdd, project }: { isOdd: boolean; project: TProject }) {
-  return (
-    <Link
-      href={project.link}
-      target="_blank"
-      className={cn(
-        "relative hidden lg:block bg-gray-50 w-[50%] h-full rounded-xl z-10 group overflow-clip",
-        isOdd && "order-2"
-      )}
-    >
-      <Image
-        fill
-        sizes="100%"
-        priority={false}
-        src={project.image}
-        alt={project.title}
-        className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 object-cover object-center"
-      />
-    </Link>
-  );
-}
-
 function InfoCardWithTilt({ project }: { project: TProject }) {
   return (
-    <TiltCard className="lg:w-[50%] lg:aspect-[16/9] bg-gray-50 shadow-2xl dark:bg-gray-900 z-10">
+    <TiltCard className="lg:w-[50%] lg:aspect-[16/9] min-h-[250px] bg-gray-50 shadow-2xl dark:bg-gray-900 z-10">
       <Link
         target="_blank"
         href={project.link}
