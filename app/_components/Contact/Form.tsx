@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { sendMail } from "@/lib/action";
 import { Loader2 } from "lucide-react";
 import React from "react";
 
@@ -14,10 +15,12 @@ const Form = () => {
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
+  const [success, setSuccess] = React.useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setSuccess(null);
     setError(null);
 
     if (!validateName(name)) {
@@ -39,18 +42,9 @@ const Form = () => {
     }
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Something went wrong");
-      }
-
+      const res = await sendMail({ name, email, message });
+      if (!res.success) throw new Error(res.message);
+      setSuccess(res.message);
       setName("");
       setEmail("");
       setMessage("");
@@ -64,6 +58,15 @@ const Form = () => {
       setLoading(false);
     }
   };
+
+  React.useEffect(() => {
+    const timeout = setTimeout(() => {
+      setError(null);
+      setSuccess(null);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, [error, success]);
 
   return (
     <form
@@ -102,13 +105,24 @@ const Form = () => {
         Get In Touch
         {loading && <Loader2 className="animate-spin ml-2" size={16} />}
       </Button>
-      <p
-        className={`text-red-600 text-sm font-[500] ${
-          error ? "animate-fade-in" : "animate-fade-out"
-        }`}
-      >
-        {error}
-      </p>
+      {error && (
+        <p
+          className={`text-red-600 text-sm font-[500] ${
+            error ? "animate-fade-in" : "animate-fade-out"
+          }`}
+        >
+          {error}
+        </p>
+      )}
+      {success && (
+        <p
+          className={`text-green-600 text-sm font-[500] ${
+            success ? "animate-fade-in" : "animate-fade-out"
+          }`}
+        >
+          {success}
+        </p>
+      )}
     </form>
   );
 };

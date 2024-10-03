@@ -48,14 +48,6 @@ body {
   font-family: var(--font-sora), sans-serif;
 }
 
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
 ::selection {
   background: light-dark(var(--dark), var(--light));
   color: light-dark(var(--light), var(--dark));
