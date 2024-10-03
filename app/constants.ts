@@ -96,7 +96,7 @@ export const projects: TProject[] = [
     description:
       "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators. The design is clean and user-friendly, allowing visitors to easily navigate through various sections like About Me, Projects, and Contact.",
     image: "/projects/portfolio.png",
-    link: "https://pii.netlify.app",
+    link: "https://pii-v1.netlify.app/",
     linkToGH: "https://github.com/Phingaz/myPortfolio",
   },
 ];
