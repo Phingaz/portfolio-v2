@@ -9,7 +9,7 @@ import ScrollLogo from "../Utils/ScrollLogo";
 const Hero = () => {
   return (
     <section id="hero" className="container screen-height py-0">
-      <div className="flex flex-col md:flex-row justify-center md:items-center gap-1 py-5">
+      <div className="flex flex-col md:flex-row justify-center md:items-center gap-1 py-5 min-h-[85svh]">
         <div className="md:w-[50%]">
           <h1 className="text-hero-text font-[500] leading-[1.4] mb-5 text-heading dark:text-white">
             Hello, I am <span className="font-bold">Prosper Agwegiokhe</span>.

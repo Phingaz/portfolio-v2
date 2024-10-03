@@ -76,6 +76,13 @@ export const projects: TProject[] = [
     link: "https://piimovie.pnoya.com",
   },
   {
+    title: "Kojo Support Project",
+    description:
+      "The support dashboard offers a streamlined interface for accessing company data. Users can query the database through a clean, filterable, and sortable table, making it easy to find relevant information. Each entry can display specific customer details and also view agent information, including their performance metrics and assigned tickets. The dashboard prioritizes simplicity, ensuring quick and efficient access to both customer and agent data for seamless support management.",
+    image: "/projects/kojo.png",
+    link: "https://kojo-dashboard.pnoya.com",
+  },
+  {
     title: "My Porfolio V1",
     description:
       "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators. The design is clean and user-friendly, allowing visitors to easily navigate through various sections like About Me, Projects, and Contact.",
