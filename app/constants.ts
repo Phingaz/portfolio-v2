@@ -90,7 +90,6 @@ export const projects: TProject[] = [
       "The support dashboard offers a streamlined interface for accessing company data. Users can query the database through a clean, filterable, and sortable table, making it easy to find relevant information. Each entry can display specific customer details and also view agent information, including their performance metrics and assigned tickets. The dashboard prioritizes simplicity, ensuring quick and efficient access to both customer and agent data for seamless support management.",
     image: "/projects/kojo.png",
     link: "https://kojo-dashboard.pnoya.com",
-    linkToGH: "https://github.com/Phingaz/kojo-support-project",
   },
   {
     title: "Loja Frank Mills",
