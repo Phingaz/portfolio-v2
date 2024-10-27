@@ -4,13 +4,10 @@ import { projects } from "../../constants";
 
 export default function ProjectSection() {
   return (
-    <section
-      id="projects"
-      className="bg-gray-50 dark:bg-black dark:text-white"
-    >
+    <section id="projects" className="bg-gray-50 dark:bg-black dark:text-white">
       <div className="container mx-auto">
         <SectionHead first="My" second="Projects" />
-        <div className="grid gap-10 w-full">
+        <div className="grid md:grid-cols-2 gap-10 w-full">
           {projects.map((project, index) => {
             const isOdd = index % 2 !== 0;
             return (

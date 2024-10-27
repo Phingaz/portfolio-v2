@@ -62,6 +62,14 @@ export const projects: TProject[] = [
     link: "https://ba.pnoya.com",
   },
   {
+    title: "Atlassian Community Scrapper",
+    description:
+      "The Atlassian Community Scrapper is a powerful tool that extracts data from the Atlassian Community forum. Users can search for topics by keyword and get the result of the keywords. This app simplifies the process of finding relevant content, making it easy to stay informed and engaged with the Atlassian Community.",
+    image: "/projects/as.png",
+    link: "https://atlassian-scrapper.pnoya.com",
+    linkToGH: "https://github.com/Phingaz/atlassian-scrapper", 
+  },
+  {
     title: "Alex Barbs",
     description:
       "Alex Barbs is a user-friendly online booking platform designed specifically for barber services. This convenient tool allows customers to easily schedule their haircuts and grooming appointments with their favorite barber. The app saves time for both clients and barbers, reducing phone calls and eliminating scheduling conflicts.",

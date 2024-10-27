@@ -32,7 +32,7 @@ export default function ImageCard({
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            "relative lg:flex hidden bg-gray-50 w-[50%] h-full rounded-xl z-10 group overflow-hidden border shadow-md dark:bg-black dark:border-gray-800",
+            "relative flex bg-gray-50 w-full h-full rounded-xl z-10 group overflow-hidden dark:bg-black",
             isOdd && "order-2"
           )}
         >
@@ -54,7 +54,7 @@ export default function ImageCard({
               className="object-cover object-center"
             />
           </motion.div>
-          <div className="absolute inset-0 flex justify-end w-full h-full border">
+          <div className="absolute inset-0 flex justify-end w-full h-full min-w-fit">
             <div className="mr-6 flex flex-col justify-center items-center gap-4">
               <Link
                 target="_blank"
@@ -80,7 +80,7 @@ export default function ImageCard({
           href={project.link}
           target="_blank"
           className={cn(
-            "relative hidden lg:block bg-gray-50 w-[50%] h-full rounded-xl z-10 group overflow-clip",
+            "relative block bg-gray-50 w-full h-full rounded-xl z-10 group overflow-clip",
             isOdd && "order-2"
           )}
         >
