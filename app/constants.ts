@@ -64,7 +64,7 @@ export const projects: TProject[] = [
   {
     title: "Atlassian Community Scrapper",
     description:
-      "The Atlassian Community Scrapper is a powerful tool that extracts data from the Atlassian Community forum. Users can search for topics by keyword and get the result of the keywords. This app simplifies the process of finding relevant content, making it easy to stay informed and engaged with the Atlassian Community.",
+      "The Atlassian Community Scrapper is a powerful tool that extracts data from the Atlassian Community forum This app simplifies the process of finding relevant content, making it easy to stay informed and engaged with the Atlassian Community.",
     image: "/projects/as.png",
     link: "https://atlassian-scrapper.pnoya.com",
     linkToGH: "https://github.com/Phingaz/atlassian-scrapper", 
@@ -79,7 +79,7 @@ export const projects: TProject[] = [
   {
     title: "Movie Box",
     description:
-      "This innovative app harnesses the power of the TMDB (The Movie Database) API to bring film enthusiasts a wealth of movie information at their fingertips. Users can explore a vast catalog of films, accessing details like cast, crew, ratings, and synopses. With its sleek interface and comprehensive movie data, this app is a must-have for anyone looking to enhance their cinematic experience.",
+      "This innovative app harnesses the power of the TMDB (The Movie Database) API to bring film enthusiasts a wealth of movie information at their fingertips. Users can explore a vast catalog of films, accessing details like cast, crew, ratings, and synopses.",
     image: "/projects/movie.png",
     link: "https://piimovie.pnoya.com",
     linkToGH: "https://github.com/Phingaz/piimovie",
@@ -101,7 +101,7 @@ export const projects: TProject[] = [
   {
     title: "My Porfolio V1",
     description:
-      "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators. The design is clean and user-friendly, allowing visitors to easily navigate through various sections like About Me, Projects, and Contact.",
+      "My Portfolio V1 is the initial version of a personal portfolio showcasing my skills, projects, and achievements. It provides an overview of my work, including web development projects, and serves as a hub for connecting with potential clients or collaborators.",
     image: "/projects/portfolio.png",
     link: "https://pii-v1.netlify.app/",
     linkToGH: "https://github.com/Phingaz/myPortfolio",
