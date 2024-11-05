@@ -51,10 +51,12 @@ export default function ImageCard({
               className="object-cover object-center"
             />
           </motion.div>
-          <div className="absolute inset-0 flex flex-col p-4 gap-8 items-end justify-center w-full h-full min-w-fit border">
+          <div className="absolute inset-0 flex flex-col p-4 gap-8 items-end justify-center w-full h-full min-w-fit">
             <div className="flex flex-col gap-3 max-w-[60%] pl-6 text-justify">
               <p className="text-sm font-[500]">{project.title}</p>
-              <p className="text-xs text-gray-600">{project.description}</p>
+              <p className="text-xs text-gray-600 dark:text-gray-200">
+                {project.description}
+              </p>
             </div>
 
             <div className="flex justify-between items-center gap-4 pl-6 w-[60%]">
