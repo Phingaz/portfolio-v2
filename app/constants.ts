@@ -89,15 +89,15 @@ export const projects: TProject[] = [
     description:
       "The support dashboard offers a streamlined interface for accessing company data. Users can query the database through a clean, filterable, and sortable table, making it easy to find relevant information. Each entry can display specific customer details and also view agent information, including their performance metrics and assigned tickets. The dashboard prioritizes simplicity, ensuring quick and efficient access to both customer and agent data for seamless support management.",
     image: "/projects/kojo.png",
-    link: "https://kojo-dashboard.pnoya.com",
+    link: "https://kojo.pnoya.com",
   },
-  {
-    title: "Loja Frank Mills",
-    description:
-      "At Frank Mills, they offer a wide selection of stylish leather bags and backpacks to suit every occasion. The user-friendly app ensures that all orders go directly to WhatsApp for quick and easy communication. Plus, with the admin dashboard, the admins can easily manage products, track inventory, and update their selections—all from their device. Discover the perfect blend of style and convenience at Frank Mills today!",
-    image: "/projects/fm.png",
-    link: "https://frankmills.pnoya.com",
-  },
+  // {
+  //   title: "Loja Frank Mills",
+  //   description:
+  //     "At Frank Mills, they offer a wide selection of stylish leather bags and backpacks to suit every occasion. The user-friendly app ensures that all orders go directly to WhatsApp for quick and easy communication. Plus, with the admin dashboard, the admins can easily manage products, track inventory, and update their selections—all from their device. Discover the perfect blend of style and convenience at Frank Mills today!",
+  //   image: "/projects/fm.png",
+  //   link: "https://frankmills.pnoya.com",
+  // },
   {
     title: "My Porfolio V1",
     description:
